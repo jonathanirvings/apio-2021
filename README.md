@@ -15,11 +15,11 @@ To clone this repository together with the submodule, use `git clone --recursive
 
 ### Problem Assets
 
-Common problem assets (i.e. `Makefile` and `testlib.h`) are included in `tps/problem-assets/`. Therefore, for default `Makefile`s and `testlib.h`s, each problem should also use relative symlink to these files as well.
+Common problem assets (i.e. `Makefile` and `testlib.h`) are included in `tps/problem-assets/`. Therefore, for the default `Makefile`s and `testlib.h`s, each problem should use relative symlink to these files as well.
 
 ### Test Data Generator
 
-`gen/data` must be be generated from `gen/data.py` and excluded in the problem repository. This is to avoid duplicating many hardcoded numbers, such as `maxN`. The modified `tps/problem-assets/Makefile` ensures to generate `gen/data` when running `tps gen`.
+`gen/data` must be generated from `gen/data.py` and excluded in the problem repository. This is to avoid duplicating many hardcoded numbers, such as `maxN`. The modified `tps/problem-assets/Makefile` ensures to generate `gen/data` when running `tps gen`.
 
 ### Task Statement
 
@@ -48,9 +48,9 @@ To avoid duplication in parsing the input, only one `validator.cpp` must be writ
   }
 ```
 
-### Testcase Generator
+### Test Data Generator
 
-If there is only one C++ testcase generator code in `gen/`, the filename of the generator must be `gen.cpp`. Otherwise, the filename of the generators must have the prefix `gen-`.
+If there is only one C++ test data generator code in `gen/`, the filename of the generator must be `gen.cpp`. Otherwise, the filename of the generators must have the prefix `gen-`.
 
 ### Public Grader Code
 
