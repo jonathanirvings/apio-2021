@@ -58,4 +58,4 @@ C++ public grader code must be compilable using the public compile script withou
 
 ### Other Code
 
-All C++ code must be compilable using C++17 and all Python code must be runnable using Python 3.6.
+All C++ code must be compilable using C++17 and all Python code must be runnable using Python 3.7.
