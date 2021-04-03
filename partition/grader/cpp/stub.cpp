@@ -6,7 +6,7 @@
 #include <vector>
 
 int main(int argc, char *argv[]) {
-  assert(argc == 4);
+  assert(argc >= 3);
 
   FILE *fin = fopen(argv[1], "r");
   FILE *fout = fopen(argv[2], "a");
