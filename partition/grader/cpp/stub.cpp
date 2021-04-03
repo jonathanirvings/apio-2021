@@ -12,21 +12,21 @@ int main(int argc, char *argv[]) {
   FILE *fout = fopen(argv[2], "a");
 
   int N;
-  assert(fscanf(fin, "%d", &N) == 1);
+  assert(1 == fscanf(fin, "%d", &N));
   
   std::vector<int> A(N), B(N);
   for (int i = 0; i < N; ++i) {
-    assert(fscanf(fin, "%d", &A[i]) == 1);
+    assert(1 == fscanf(fin, "%d", &A[i]));
   }
   for (int i = 0; i < N; ++i) {
-    assert(fscanf(fin, "%d", &B[i]) == 1);
+    assert(1 == fscanf(fin, "%d", &B[i]));
   }
 
   init(N, A, B);
 
   while (true) {
     int X, Y;
-    assert(fscanf(fin, "%d %d", &X, &Y) == 2);
+    assert(2 == fscanf(fin, "%d %d", &X, &Y));
     if (X < 0 || Y < 0) {
       break;
     }
