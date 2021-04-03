@@ -83,14 +83,14 @@ int main(int argc, char *argv[]) {
   FILE *fin = fopen(argv[1], "r");
 
   int N, Q;
-  assert(scanf("%d %d", &N, &Q) == 2);
+  assert(2 == scanf("%d %d", &N, &Q));
 
   std::vector<int> A(N), B(N);
   for (int i = 0; i < N; ++i) {
-    assert(scanf("%d", &A[i]) == 1);
+    assert(1 == scanf("%d", &A[i]));
   }
   for (int i = 0; i < N; ++i) {
-    assert(scanf("%d", &B[i]) == 1);
+    assert(1 == scanf("%d", &B[i]));
   }
 
   fprintf(fout, "%d\n", N);
@@ -114,7 +114,7 @@ int main(int argc, char *argv[]) {
   bool correct_answer = true;
   for (int i = 0; i < Q; ++i) {
     int X, Y;
-    assert(scanf("%d %d", &X, &Y) == 2);
+    assert(2 == scanf("%d %d", &X, &Y));
     fprintf(fout, "%d %d\n", X, Y);
     fflush(fout);
     
