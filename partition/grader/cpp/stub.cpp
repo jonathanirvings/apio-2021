@@ -30,8 +30,7 @@ int main(int argc, char *argv[]) {
     if (X < 0 || Y < 0) {
       break;
     }
-    int partition = count_partition(X, Y);
-    fprintf(fout, "%d\n", partition);
+    fprintf(fout, "%d\n", count_partition(X, Y));
     fflush(fout);
   }
 
