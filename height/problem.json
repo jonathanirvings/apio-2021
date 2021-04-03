@@ -1,0 +1,10 @@
+{
+  "name": "height",
+  "code": "height",
+  "title": "Height Restrictions",
+  "memory_limit": 1024,
+  "time_limit": 4.0,
+  "type": "Communication",
+  "num_processes": 1,
+  "grader_name": "stub"
+}
