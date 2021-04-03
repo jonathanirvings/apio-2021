@@ -16,7 +16,7 @@ If it is possible, Pak Dengklek would like to know the minimum number of jumps t
 
 ## Implementation Details
 
-You should implement the following procedure.
+You should implement the following procedures:
 
 ```
 void init(int N, int[] H)
