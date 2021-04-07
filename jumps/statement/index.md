@@ -85,7 +85,7 @@ Therefore, the procedure `minimum_jumps` should return $-1$.
 ## Subtasks
 
 1. (? points) $H[i] = i + 1$ (for all $0 \le i \le N - 1$).
-1. (? points) $N \le 100$, $Q \le 100$.
+1. (? points) $N \le 200$, $Q \le 200$.
 1. (? points) $N \le 2000$, $Q \le 2000$.
 1. (? points) $Q = 1$.
 1. (? points) $A = B$, $C = D$.
