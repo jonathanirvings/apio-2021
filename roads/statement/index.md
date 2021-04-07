@@ -1,4 +1,4 @@
-# Roads Closure
+# Road Closures
 
 In the city of Surabaya, there are $N$ junctions, numbered from $0$ to $N - 1$.
 These junctions are connected by $N - 1$ bidirectional roads, numbered from $0$ to $N - 2$, such that there is a unique path between any pair of junctions through the roads.
