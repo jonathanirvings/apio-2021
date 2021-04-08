@@ -3,6 +3,8 @@
 #include <cassert>
 #include <cstdio>
 
+#include <vector>
+
 int main() {
   int N, Q;
   assert(2 == scanf("%d %d", &N, &Q));
