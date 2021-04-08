@@ -77,22 +77,22 @@ Therefore, the procedure `draw_territory` should return $1003$.
 
 ## Constraints
 
-* $3 \le N \le 100\,000$.
-* $0 \le A, B \le 10^9$.
-* $1 \le D[i] \le 6$ (for all $0 \le i \le N - 1$).
-* $1 \le L[i]$ (for all $0 \le i \le N - 1$).
+* $3 \le N \le 100\,000$
+* $0 \le A, B \le 10^9$
+* $1 \le D[i] \le 6$ (for all $0 \le i \le N - 1$)
+* $1 \le L[i]$ (for all $0 \le i \le N - 1$)
 * The sum of all elements of $L$ does not exceed $10^9$.
 * The path is closed, simple, and exposed.
 
 ## Subtasks
 
-1. (? points) $N = 3$, $B = 0$.
-1. (? points) $N = 3$.
+1. (? points) $N = 3$, $B = 0$
+1. (? points) $N = 3$
 1. (? points) The sum of all elements of $L$ does not exceed $2\,000$.
 1. (? points) $B = 0$, the sum of all elements of $L$ does not exceed $1\,000\,000$.
-1. (? points) $B = 0$.
+1. (? points) $B = 0$
 1. (? points) The sum of all elements of $L$ does not exceed $1\,000\,000$.
-1. (? points) $L[i] = L[i + 1]$ (for all $0 \le i \le N - 2$).
+1. (? points) $L[i] = L[i + 1]$ (for all $0 \le i \le N - 2$)
 1. (? points) No additional constraints.
 
 ## Sample Grader

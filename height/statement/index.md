@@ -91,18 +91,18 @@ Therefore, the procedure `add_restriction` should return $0$.
 
 ## Constraints
 
-* $1 \le N, Q \le 200\,000$.
-* $0 \le L \le R \le N - 1$.
-* $1 \le H \le 10^9$.
+* $1 \le N, Q \le 200\,000$
+* $0 \le L \le R \le N - 1$
+* $1 \le H \le 10^9$
 
 ## Subtasks
 
-1. (? points) $L = R$.
-1. (? points) $L = 0$.
-1. (? points) $N, Q \le 2000$.
+1. (? points) $L = R$
+1. (? points) $L = 0$
+1. (? points) $N, Q \le 2000$
 1. (? points) The value of $R - L$ is the same for all calls to `add_restriction`.
-1. (? points) $H \le 20$.
-1. (? points) $N, Q \le 50\,000$.
+1. (? points) $H \le 20$
+1. (? points) $N, Q \le 50\,000$
 1. (? points) No additional constraints.
 
 ## Sample Grader

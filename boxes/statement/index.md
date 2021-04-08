@@ -52,18 +52,18 @@ Therefore, the procedure `minimum_lifts` should return $8$.
 
 ## Constraints
 
-* $1 \le N \le 2000$.
-* $1 \le M \le 100\,000$.
-* $0 \le A[i] \le M$ (for all $0 \le i \le N - 1$).
+* $1 \le N \le 2000$
+* $1 \le M \le 100\,000$
+* $0 \le A[i] \le M$ (for all $0 \le i \le N - 1$)
 
 ## Subtasks
 
-1. (? points) $N, M \le 10$.
-1. (? points) $N, M \le 20$.
-1. (? points) $N, M \le 30$.
+1. (? points) $N, M \le 10$
+1. (? points) $N, M \le 20$
+1. (? points) $N, M \le 30$
 1. (? points) $A[i]$ is divisible by $M$ (for all $0 \le i \le N - 1$).
-1. (? points) $N = M + 1$, $A[i] = i$ (for all $0 \le i \le N - 1$).
-1. (? points) $N \le 200$.
+1. (? points) $N = M + 1$, $A[i] = i$ (for all $0 \le i \le N - 1$)
+1. (? points) $N \le 200$
 1. (? points) No additional constraints.
 
 ## Sample Grader

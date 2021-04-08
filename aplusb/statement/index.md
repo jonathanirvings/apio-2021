@@ -39,12 +39,12 @@ This means that you are asked to find the result of adding $2$ and $3$. It can b
 
 ## Constraints
 
-* $0 \le A, B \le 100$.
+* $0 \le A, B \le 100$
 
 ## Subtasks
 
-1. (20 points) $0 \le A, B \le 10$.
-2. (30 points) $B = 0$.
+1. (20 points) $0 \le A, B \le 10$
+2. (30 points) $B = 0$
 3. (50 points) No additional constraints.
 
 ## Sample Grader
