@@ -89,7 +89,7 @@ Therefore, the procedure `minimum_jumps` should return $-1$.
 1. (? points) $N \le 2000$, $Q \le 2000$.
 1. (? points) $Q = 1$.
 1. (? points) $A = B$, $C = D$.
-1. (? points) $A = B$.
+1. (? points) $C = D$.
 1. (? points) No additional constraints.
 
 ## Sample Grader

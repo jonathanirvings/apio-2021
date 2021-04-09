@@ -26,12 +26,12 @@
       "score": 0,
       "validators": []
     },
-    "fixed-point": {
+    "fixed-start-end": {
       "index": 5,
       "score": 0,
       "validators": []
     },
-    "fixed-start": {
+    "fixed-end": {
       "index": 6,
       "score": 0,
       "validators": []
