@@ -71,7 +71,7 @@ To answer these minimum costs, the `minimum_closure_costs` procedure should retu
 ## Constraints
 
 * $2 \le N \le 100\,000$.
-* $0 \le U[i], V[i] \le N$ (for all $0 \le i \le N - 2$).
+* $0 \le U[i], V[i] \le N - 1$ (for all $0 \le i \le N - 2$).
 * It is possible to travel between any pair of junctions through the roads.
 * $1 \le W[i] \le 10^9$ (for all $0 \le i \le N - 2$).
 
@@ -79,7 +79,7 @@ To answer these minimum costs, the `minimum_closure_costs` procedure should retu
 
 1. (? points) $U[i] = 0$ (for all $0 \le i \le N - 2$).
 1. (? points) $U[i] = i$, $V[i] = i + 1$ (for all $0 \le i \le N - 2$).
-1. (? points) $N \le 100$.
+1. (? points) $N \le 200$.
 1. (? points) $N \le 2000$.
 1. (? points) $W[i] = 1$ (for all $0 \le i \le N - 2$).
 1. (? points) $W[i] \le 10$ (for all $0 \le i \le N - 2$).
