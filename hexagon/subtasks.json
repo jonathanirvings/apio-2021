@@ -1,0 +1,50 @@
+{
+  "subtask_sensitive_validators": ["validator.cpp {subtask}"],
+  "subtasks": {
+    "samples": {
+      "index": 0,
+      "score": 0,
+      "validators": []
+    },
+    "B-equals-zero-triangle": {
+      "index": 1,
+      "score": 0,
+      "validators": []
+    },
+    "triangle": {
+      "index": 2,
+      "score": 0,
+      "validators": []
+    },
+    "quadratic-sum-L": {
+      "index": 3,
+      "score": 0,
+      "validators": []
+    },
+    "B-equals-zero-small": {
+      "index": 4,
+      "score": 0,
+      "validators": []
+    },
+    "B-equals-zero": {
+      "index": 5,
+      "score": 0,
+      "validators": []
+    },
+    "linear-sum-L": {
+      "index": 6,
+      "score": 0,
+      "validators": []
+    },
+    "constant-L": {
+      "index": 7,
+      "score": 0,
+      "validators": []
+    },
+    "full": {
+      "index": 8,
+      "score": 0,
+      "validators": []
+    }
+  }
+}
