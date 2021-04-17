@@ -1,5 +1,8 @@
 #include "testlib.h"
 
+#include <string.h>
+
+#include <string>
 #include <vector>
 
 const int kMaxN = 2000;

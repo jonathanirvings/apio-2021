@@ -1,6 +1,11 @@
 #include "testlib.h"
 
+#include <string.h>
+
+#include <functional>
 #include <numeric>
+#include <string>
+#include <vector>
 
 const int kMaxN = 100'000;
 const int kMaxW = 1'000'000'000;
@@ -25,14 +30,14 @@ int main(int, char *argv[]) {
   if (strcmp(subtask_name, "constant-W") == 0) {
     maxW = 1;
   } else if (strcmp(subtask_name, "small-W") == 0) {
-    maxW = 0;
+    maxW = 10;
   }
 
   int N = inf.readInt(2, maxN, "N");
   inf.readEoln();
 
   std::vector<int> U(N - 1), V(N - 1);
-  for (int i = 0; i < N - 2; ++i) {
+  for (int i = 0; i < N - 1; ++i) {
     U[i] = inf.readInt(0, N - 1, "U");
     inf.readSpace();
     V[i] = inf.readInt(0, N - 1, "V");
@@ -48,7 +53,7 @@ int main(int, char *argv[]) {
   }
 
   if (strcmp(subtask_name, "line") == 0) {
-    for (int i = 0; i < N - 2; ++i) {
+    for (int i = 0; i < N - 1; ++i) {
       ensuref(U[i] == i, "Found U[i] != i");
       ensuref(V[i] == i + 1, "Found V[i] != i + 1");
     }
@@ -62,7 +67,7 @@ int main(int, char *argv[]) {
       return root[u] = find(root[u]);
     };
 
-    for (int i = 0; i < N - 2; ++i) {
+    for (int i = 0; i < N - 1; ++i) {
       if (find(U[i]) == find(V[i])) return false;
       root[root[U[i]]] = root[V[i]];
     }

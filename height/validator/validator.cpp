@@ -1,5 +1,9 @@
 #include "testlib.h"
 
+#include <string.h>
+
+#include <string>
+
 constexpr int kMaxN = 200000;
 constexpr int kMaxQ = 200000;
 constexpr int kMaxH = 1000000000;

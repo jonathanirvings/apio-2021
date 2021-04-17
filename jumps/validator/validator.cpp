@@ -1,6 +1,9 @@
 #include "testlib.h"
 
-#include <numeric>
+#include <string.h>
+
+#include <string>
+#include <vector>
 
 const int kMaxN = 200'000;
 const int kMaxQ = 100'000;
