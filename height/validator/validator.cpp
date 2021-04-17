@@ -6,6 +6,9 @@ constexpr int kMaxH = 1000000000;
 
 int main(int, char *argv[]) {
   registerValidation();
+  std::string secret = inf.readLine();
+  ensuref(secret == (std::string)"29ece75d26674ef1419c1cb0b6f4f53b7b3ffc76",
+          "Secret not found!");
 
   const char* subtask_name = argv[1];
 

@@ -7,6 +7,9 @@ const int kMaxQ = 100'000;
 
 int main(int, char *argv[]) {
   registerValidation();
+  std::string secret = inf.readLine();
+  ensuref(secret == (std::string)"209636825ecd2c38299498cd26890ef71dd128c2",
+          "Secret not found!");
 
   const char* subtask_name = argv[1];
 

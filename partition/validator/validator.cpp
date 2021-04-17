@@ -9,6 +9,9 @@ constexpr int kMaxX = 1000000000;
 
 int main(int, char *argv[]) {
   registerValidation();
+  std::string secret = inf.readLine();
+  ensuref(secret == (std::string)"ini-adalah-masukan-rahasia",
+          "Secret not found!");
 
   const char* subtask_name = argv[1];
 
