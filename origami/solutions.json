@@ -1,0 +1,12 @@
+{
+  "solution.cpp": {
+    "verdict": "model_solution"
+  },
+  "solution_jonathanirvings.cpp": {
+    "verdict": "partially_correct",
+    "except": {
+      "subtask1": "correct",
+      "subtask2": "correct"
+    }
+  }
+}
