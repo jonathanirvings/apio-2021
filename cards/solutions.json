@@ -1,0 +1,28 @@
+{
+  "solution.cpp": {
+    "verdict": "model_solution"
+  },
+  "solution-k2.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "k2": "correct"
+    }
+  },
+  "solution-k3.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "k2": "correct",
+      "k3": "correct"
+    }
+  },
+  "solution-k6.cpp": {
+    "verdict": "failed",
+    "except": {
+      "samples": "correct",
+      "k2": "correct",
+      "k3": "correct",
+      "k6": "correct"
+    }
+  }
+}
