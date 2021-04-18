@@ -1,0 +1,14 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+\tikzset{hexa/.style= {shape=regular polygon,
+                       regular polygon sides=6,
+                       minimum size=1cm,draw,
+                       inner sep=0}}
+
+\begin{document}
+    \include{directions}
+    \include{path}
+    \include{distances}
+\end{document}  
