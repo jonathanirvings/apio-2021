@@ -3,6 +3,6 @@
   "code": "boxes",
   "title": "Box Lifting",
   "memory_limit": 1024,
-  "time_limit": 1.0,
+  "time_limit": 2.0,
   "type": "Batch"
 }
