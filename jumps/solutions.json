@@ -78,5 +78,8 @@
       "fixed-start-end": "correct",
       "fixed-end": "correct"
     }
+  },
+  "solution-prabowo.cpp": {
+    "verdict": "correct"
   }
 }
