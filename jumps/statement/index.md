@@ -76,7 +76,7 @@ Therefore, the procedure `minimum_jumps` should return $-1$.
 
 ## Constraints
 
-* $2 \le N \le 100\,000$
+* $2 \le N \le 200\,000$
 * $1 \le Q \le 100\,000$
 * $1 \le H[i] \le N$ (for all $0 \le i \le N - 1$)
 * $H[i] \neq H[j]$ (for all $0 \le i < j \le N - 1$)
@@ -87,7 +87,7 @@ Therefore, the procedure `minimum_jumps` should return $-1$.
 1. (? points) $H[i] = i + 1$ (for all $0 \le i \le N - 1$)
 1. (? points) $N \le 200$, $Q \le 200$
 1. (? points) $N \le 2000$, $Q \le 2000$
-1. (? points) $Q = 1$
+1. (? points) $Q \le 5$
 1. (? points) $A = B$, $C = D$
 1. (? points) $C = D$
 1. (? points) No additional constraints.
