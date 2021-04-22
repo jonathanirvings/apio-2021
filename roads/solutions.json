@@ -49,5 +49,8 @@
   },
   "solution_unweighted_incorrect_greedy_set.cpp": {
     "verdict": "incorrect"
+  },
+  "solution-prabowo.cpp": {
+    "verdict": "correct"
   }
 }
