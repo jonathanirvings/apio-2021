@@ -1,0 +1,212 @@
+stages:
+  - verify
+  - gen
+  - export_staging
+
+before_script:
+  - git submodule update --init --recursive
+  - chmod +x tps/tps.sh
+
+.verify_template: &verify_template
+  stage: verify
+  script:
+    - cd "${CI_PROJECT_DIR}/${TASK}"
+    - ../tps/tps.sh verify
+
+.gen_template: &gen_template
+  stage: gen
+  script:
+    - cd "${CI_PROJECT_DIR}/${TASK}"
+    - ../tps/tps.sh gen
+    - ../tps/tps.sh export CMS -o ${TASK}
+  artifacts:
+    paths:
+      - ${TASK}/${TASK}.zip
+    expire_in: 1 week
+  only:
+    - master
+  when: manual
+  allow_failure: false
+
+.export_staging_template: &export_staging_template
+  stage: export_staging
+  script:
+    - scp ${TASK}/${TASK}.zip ${CONTROL_STAGING_HOST}:~/cms/
+    - ssh ${CONTROL_STAGING_HOST} "~/cms/import.sh ${TASK}"
+  environment:
+    name: "staging_${TASK}"
+    deployment_tier: staging
+  only:
+    - master
+  when: manual
+
+aplusb:verify:
+  <<: *verify_template
+  variables:
+    TASK: aplusb
+
+aplusb:gen:
+  <<: *gen_template
+  needs:
+    - aplusb:verify
+  variables:
+    TASK: aplusb
+
+aplusb:export_staging:
+  <<: *export_staging_template
+  needs:
+    - aplusb:gen
+  variables:
+    TASK: aplusb
+
+boxes:verify:
+  <<: *verify_template
+  variables:
+    TASK: boxes
+
+boxes:gen:
+  <<: *gen_template
+  needs:
+    - boxes:verify
+  variables:
+    TASK: boxes
+
+boxes:export_staging:
+  <<: *export_staging_template
+  needs:
+    - boxes:gen
+  variables:
+    TASK: boxes
+
+cards:verify:
+  <<: *verify_template
+  variables:
+    TASK: cards
+
+cards:gen:
+  <<: *gen_template
+  needs:
+    - cards:verify
+  variables:
+    TASK: cards
+
+cards:export_staging:
+  <<: *export_staging_template
+  needs:
+    - cards:gen
+  variables:
+    TASK: cards
+
+height:verify:
+  <<: *verify_template
+  variables:
+    TASK: height
+
+height:gen:
+  <<: *gen_template
+  needs:
+    - height:verify
+  variables:
+    TASK: height
+
+height:export_staging:
+  <<: *export_staging_template
+  needs:
+    - height:gen
+  variables:
+    TASK: height
+
+hexagon:verify:
+  <<: *verify_template
+  variables:
+    TASK: hexagon
+
+hexagon:gen:
+  <<: *gen_template
+  needs:
+    - hexagon:verify
+  variables:
+    TASK: hexagon
+
+hexagon:export_staging:
+  <<: *export_staging_template
+  needs:
+    - hexagon:gen
+  variables:
+    TASK: hexagon
+
+jumps:verify:
+  <<: *verify_template
+  variables:
+    TASK: jumps
+
+jumps:gen:
+  <<: *gen_template
+  needs:
+    - jumps:verify
+  variables:
+    TASK: jumps
+
+jumps:export_staging:
+  <<: *export_staging_template
+  needs:
+    - jumps:gen
+  variables:
+    TASK: jumps
+
+origami:verify:
+  <<: *verify_template
+  variables:
+    TASK: origami
+
+origami:gen:
+  <<: *gen_template
+  needs:
+    - origami:verify
+  variables:
+    TASK: origami
+
+origami:export_staging:
+  <<: *export_staging_template
+  needs:
+    - origami:gen
+  variables:
+    TASK: origami
+
+partition:verify:
+  <<: *verify_template
+  variables:
+    TASK: partition
+
+partition:gen:
+  <<: *gen_template
+  needs:
+    - partition:verify
+  variables:
+    TASK: partition
+
+partition:export_staging:
+  <<: *export_staging_template
+  needs:
+    - partition:gen
+  variables:
+    TASK: partition
+
+roads:verify:
+  <<: *verify_template
+  variables:
+    TASK: roads
+
+roads:gen:
+  <<: *gen_template
+  needs:
+    - roads:verify
+  variables:
+    TASK: roads
+
+roads:export_staging:
+  <<: *export_staging_template
+  needs:
+    - roads:gen
+  variables:
+    TASK: roads
