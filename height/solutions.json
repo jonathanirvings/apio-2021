@@ -1,0 +1,13 @@
+{
+  "tle-update-equal-contiguous-wiwit.cpp": {
+    "verdict": "time_limit",
+    "except": {
+      "samples": "correct",
+      "L-equals-R": "correct",
+      "L-equals-zero": "correct",
+      "quadratic": "correct",
+      "constant-difference": "correct",
+      "small-H": "correct"
+    }
+  }
+}
