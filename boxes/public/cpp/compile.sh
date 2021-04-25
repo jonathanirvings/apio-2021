@@ -3,4 +3,4 @@
 problem=boxes
 grader_name=grader
 
-g++ -std=c++17 -o "${problem}" "${grader_name}.cpp" "${problem}.cpp" -O2 -lm -Wall
+g++ -std=gnu++17 -O2 -pipe -o "${problem}" "${grader_name}.cpp" "${problem}.cpp"
