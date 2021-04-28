@@ -1,0 +1,52 @@
+{
+  "solution.cpp": {
+    "verdict": "model_solution"
+  },
+  "subtask-1.cpp": {
+    "verdict": "time_limit",
+    "except": {
+      "samples": "correct",
+      "bruteforce": "correct"
+    }
+  },
+  "subtask-2.cpp": {
+    "verdict": "failed",
+    "except": {
+      "samples": "correct",
+      "bruteforce": "correct",
+      "exponential": "correct"
+    }
+  },
+  "subtask-3.cpp": {
+    "verdict": "runtime_error",
+    "except": {
+      "samples": "correct",
+      "bruteforce": "correct",
+      "exponential": "correct",
+      "fifth": "correct"
+    }
+  },
+  "subtask-4.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "M-divides-A_i": "correct"
+    }
+  },
+  "subtask-5.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "A_i-equals-i": "correct"
+    }
+  },
+  "subtask-6.cpp": {
+    "verdict": "time_limit",
+    "except": {
+      "samples": "correct",
+      "bruteforce": "correct",
+      "exponential": "correct",
+      "fifth": "correct",
+      "cubic": "correct"
+    }
+  }
+}
