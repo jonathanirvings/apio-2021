@@ -2,14 +2,14 @@
   "solution.cpp": {
     "verdict": "model_solution"
   },
-  "subtask-1.cpp": {
+  "subtask-bruteforce.cpp": {
     "verdict": "time_limit",
     "except": {
       "samples": "correct",
       "bruteforce": "correct"
     }
   },
-  "subtask-2.cpp": {
+  "subtask-exponential.cpp": {
     "verdict": "failed",
     "except": {
       "samples": "correct",
@@ -17,7 +17,7 @@
       "exponential": "correct"
     }
   },
-  "subtask-3.cpp": {
+  "subtask-fifth.cpp": {
     "verdict": "runtime_error",
     "except": {
       "samples": "correct",
@@ -26,20 +26,20 @@
       "fifth": "correct"
     }
   },
-  "subtask-4.cpp": {
+  "subtask-M-divides-A_i.cpp": {
     "verdict": "incorrect",
     "except": {
       "M-divides-A_i": "correct"
     }
   },
-  "subtask-5.cpp": {
+  "subtask-A_i-equals-i.cpp": {
     "verdict": "incorrect",
     "except": {
       "samples": "correct",
       "A_i-equals-i": "correct"
     }
   },
-  "subtask-6.cpp": {
+  "subtask-cubic.cpp": {
     "verdict": "time_limit",
     "except": {
       "samples": "correct",
