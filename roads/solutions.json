@@ -68,6 +68,16 @@
   "solution-prabowo.cpp": {
     "verdict": "correct"
   },
+  "solution-prabowo-log-squared.cpp": {
+    "verdict": "correct"
+  },
+  "tle-prabowo-no-fenwick.cpp": {
+    "verdict": "correct",
+    "except": {
+      "star": "time_limit",
+      "full": "time_limit"
+    }
+  },
   "solution-wiwitrifai.cpp": {
     "verdict": "correct"
   }
