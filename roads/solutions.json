@@ -58,6 +58,13 @@
       "small-W": "correct"
     }
   },
+  "solution_dynamic_w.cpp": {
+    "verdict": "correct",
+    "except": {
+      "star": "time_limit",
+      "full": "time_limit"
+    }
+  },
   "solution-prabowo.cpp": {
     "verdict": "correct"
   },
