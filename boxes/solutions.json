@@ -48,5 +48,24 @@
       "fifth": "correct",
       "cubic": "correct"
     }
+  },
+  "solution-prabowo.cpp": {
+    "verdict": "correct"
+  },
+  "wa-greedy-prabowo.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "M-divides-A_i": "correct"
+    }
+  },
+  "wa-dp-n3-prune-prabowo.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "bruteforce": "correct",
+      "exponential": "correct",
+      "fifth": "correct"
+    }
   }
 }
