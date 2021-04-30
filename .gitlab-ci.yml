@@ -97,6 +97,25 @@ cards:export_staging:
   variables:
     TASK: cards
 
+defence:verify:
+  <<: *verify_template
+  variables:
+    TASK: defence
+
+defence:gen:
+  <<: *gen_template
+  needs:
+    - defence:verify
+  variables:
+    TASK: defence
+
+defence:export_staging:
+  <<: *export_staging_template
+  needs:
+    - defence:gen
+  variables:
+    TASK: defence
+
 height:verify:
   <<: *verify_template
   variables:
@@ -135,6 +154,25 @@ hexagon:export_staging:
   variables:
     TASK: hexagon
 
+hoax:verify:
+  <<: *verify_template
+  variables:
+    TASK: hoax
+
+hoax:gen:
+  <<: *gen_template
+  needs:
+    - hoax:verify
+  variables:
+    TASK: hoax
+
+hoax:export_staging:
+  <<: *export_staging_template
+  needs:
+    - hoax:gen
+  variables:
+    TASK: hoax
+
 jumps:verify:
   <<: *verify_template
   variables:
@@ -153,44 +191,6 @@ jumps:export_staging:
     - jumps:gen
   variables:
     TASK: jumps
-
-origami:verify:
-  <<: *verify_template
-  variables:
-    TASK: origami
-
-origami:gen:
-  <<: *gen_template
-  needs:
-    - origami:verify
-  variables:
-    TASK: origami
-
-origami:export_staging:
-  <<: *export_staging_template
-  needs:
-    - origami:gen
-  variables:
-    TASK: origami
-
-partition:verify:
-  <<: *verify_template
-  variables:
-    TASK: partition
-
-partition:gen:
-  <<: *gen_template
-  needs:
-    - partition:verify
-  variables:
-    TASK: partition
-
-partition:export_staging:
-  <<: *export_staging_template
-  needs:
-    - partition:gen
-  variables:
-    TASK: partition
 
 roads:verify:
   <<: *verify_template
