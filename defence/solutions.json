@@ -1,0 +1,23 @@
+{
+  "solution.cpp": {
+    "verdict": "model_solution"
+  },
+  "prabowo_ac.cpp": {
+    "verdict": "correct"
+  },
+  "prabowo-place_all_one.cpp": {
+    "verdict": "partially_correct"
+  },
+  "amnu_ac.cpp": {
+    "verdict": "correct"
+  },
+  "amnu_ok.cpp": {
+    "verdict": "partially_correct",
+    "except": {
+      "subtask3": "correct",
+      "subtask4": "correct",
+      "subtask7": "correct",
+      "subtask10": "correct"
+    }
+  }
+}
