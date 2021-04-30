@@ -50,6 +50,14 @@
   "solution_unweighted_incorrect_greedy_set.cpp": {
     "verdict": "incorrect"
   },
+  "solution_small_w.cpp": {
+    "verdict": "memory_limit",
+    "except": {
+      "samples": "correct",
+      "constant-W": "correct",
+      "small-W": "correct"
+    }
+  },
   "solution-prabowo.cpp": {
     "verdict": "correct"
   },
