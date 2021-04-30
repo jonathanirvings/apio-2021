@@ -70,5 +70,8 @@
       "exponential": "correct",
       "fifth": "correct"
     }
+  },
+  "solution-dp-dnc.cpp": {
+    "verdict": "correct"
   }
 }
