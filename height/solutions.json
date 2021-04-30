@@ -1,4 +1,65 @@
 {
+  "solution.cpp": {
+    "verdict": "model_solution"
+  },
+  "solution-L-equals-R.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "L-equals-R": "correct"
+    }
+  },
+  "solution-L-equals-zero.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "L-equals-zero": "correct"
+    }
+  },
+  "solution-quadratic.cpp": {
+    "verdict": "time_limit",
+    "except": {
+      "samples": "correct",
+      "quadratic": "correct"
+    }
+  },
+  "solution-constant-difference.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "L-equals-R": "correct",
+      "constant-difference": "correct"
+    }
+  },
+  "solution-small-H.cpp": {
+    "verdict": "time_limit",
+    "except": {
+      "samples": "correct",
+      "quadratic": "correct",
+      "small-H": "correct"
+    }
+  },
+  "solution-sqrt-log.cpp": {
+    "verdict": "correct",
+    "except": {
+      "L-equals-zero": "time_limit",
+      "full": "time_limit"
+    }
+  },
+  "solution-beats-wiwit.cpp": {
+    "verdict": "correct"
+  },
+  "solution-pq-wiwit.cpp": {
+    "verdict": "correct"
+  },
+  "wa-wrong-query-sampling-prabowo.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "L-equals-R": "correct",
+      "L-equals-zero": "correct",
+      "constant-difference": "correct"
+    }
+  },
   "tle-update-equal-contiguous-wiwit.cpp": {
     "verdict": "time_limit",
     "except": {

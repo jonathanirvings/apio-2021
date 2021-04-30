@@ -4,8 +4,8 @@
 
 #include <string>
 
-constexpr int kMaxN = 200000;
-constexpr int kMaxQ = 200000;
+constexpr int kMaxN = 100000;
+constexpr int kMaxQ = 100000;
 constexpr int kMaxH = 1000000000;
 
 int main(int, char *argv[]) {
@@ -20,8 +20,6 @@ int main(int, char *argv[]) {
   int maxQ = kMaxQ;
   if (strcmp(subtask_name, "quadratic") == 0) {
     maxN = maxQ = 2000;
-  } else if (strcmp(subtask_name, "sqrt-log") == 0) {
-    maxN = maxQ = 50000;
   }
 
   int maxH = strcmp(subtask_name, "small-H") == 0 ? 20 : kMaxH;
