@@ -36,6 +36,7 @@ before_script:
 .export_staging_template: &export_staging_template
   stage: export_staging
   script:
+    - cd "${CI_PROJECT_DIR}/${TASK}"
     - ../tps/tps.sh export CMS -o ${TASK}
     - scp ${TASK}/${TASK}.zip ${CONTROL_STAGING_HOST}:~/cms/
     - ssh ${CONTROL_STAGING_HOST} "~/cms/import.sh ${TASK}"
