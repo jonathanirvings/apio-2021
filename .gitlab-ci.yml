@@ -1,6 +1,7 @@
 stages:
   - verify
   - gen
+  - invoke_all
   - export_staging
 
 before_script:
@@ -18,19 +19,24 @@ before_script:
   script:
     - cd "${CI_PROJECT_DIR}/${TASK}"
     - ../tps/tps.sh gen
-    - ../tps/tps.sh export CMS -o ${TASK}
   artifacts:
     paths:
-      - ${TASK}/${TASK}.zip
+      - ${TASK}/tests/
     expire_in: 1 week
-  only:
-    - master
   when: manual
   allow_failure: false
+
+.invoke_all_template: &invoke_all_template
+  stage: invoke_all
+  script:
+    - cd "${CI_PROJECT_DIR}/${TASK}"
+    - ../tps/tps.sh invoke-all
+  when: manual
 
 .export_staging_template: &export_staging_template
   stage: export_staging
   script:
+    - ../tps/tps.sh export CMS -o ${TASK}
     - scp ${TASK}/${TASK}.zip ${CONTROL_STAGING_HOST}:~/cms/
     - ssh ${CONTROL_STAGING_HOST} "~/cms/import.sh ${TASK}"
   environment:
@@ -49,6 +55,13 @@ aplusb:gen:
   <<: *gen_template
   needs:
     - aplusb:verify
+  variables:
+    TASK: aplusb
+
+aplusb:invoke_all:
+  <<: *invoke_all_template
+  needs:
+    - aplusb:gen
   variables:
     TASK: aplusb
 
@@ -71,6 +84,13 @@ boxes:gen:
   variables:
     TASK: boxes
 
+boxes:invoke_all:
+  <<: *invoke_all_template
+  needs:
+    - boxes:gen
+  variables:
+    TASK: boxes
+
 boxes:export_staging:
   <<: *export_staging_template
   needs:
@@ -87,6 +107,13 @@ cards:gen:
   <<: *gen_template
   needs:
     - cards:verify
+  variables:
+    TASK: cards
+
+cards:invoke_all:
+  <<: *invoke_all_template
+  needs:
+    - cards:gen
   variables:
     TASK: cards
 
@@ -109,6 +136,13 @@ defence:gen:
   variables:
     TASK: defence
 
+defence:invoke_all:
+  <<: *invoke_all_template
+  needs:
+    - defence:gen
+  variables:
+    TASK: defence
+
 defence:export_staging:
   <<: *export_staging_template
   needs:
@@ -125,6 +159,13 @@ height:gen:
   <<: *gen_template
   needs:
     - height:verify
+  variables:
+    TASK: height
+
+height:invoke_all:
+  <<: *invoke_all_template
+  needs:
+    - height:gen
   variables:
     TASK: height
 
@@ -147,6 +188,13 @@ hexagon:gen:
   variables:
     TASK: hexagon
 
+hexagon:invoke_all:
+  <<: *invoke_all_template
+  needs:
+    - hexagon:gen
+  variables:
+    TASK: hexagon
+
 hexagon:export_staging:
   <<: *export_staging_template
   needs:
@@ -163,6 +211,13 @@ hoax:gen:
   <<: *gen_template
   needs:
     - hoax:verify
+  variables:
+    TASK: hoax
+
+hoax:invoke_all:
+  <<: *invoke_all_template
+  needs:
+    - hoax:gen
   variables:
     TASK: hoax
 
@@ -185,6 +240,13 @@ jumps:gen:
   variables:
     TASK: jumps
 
+jumps:invoke_all:
+  <<: *invoke_all_template
+  needs:
+    - jumps:gen
+  variables:
+    TASK: jumps
+
 jumps:export_staging:
   <<: *export_staging_template
   needs:
@@ -201,6 +263,13 @@ roads:gen:
   <<: *gen_template
   needs:
     - roads:verify
+  variables:
+    TASK: roads
+
+roads:invoke_all:
+  <<: *invoke_all_template
+  needs:
+    - roads:gen
   variables:
     TASK: roads
 
