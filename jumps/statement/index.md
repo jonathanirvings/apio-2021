@@ -84,13 +84,13 @@ Therefore, the procedure `minimum_jumps` should return $-1$.
 
 ## Subtasks
 
-1. (? points) $H[i] = i + 1$ (for all $0 \le i \le N - 1$)
-1. (? points) $N \le 200$, $Q \le 200$
-1. (? points) $N \le 2000$, $Q \le 2000$
-1. (? points) $Q \le 5$
-1. (? points) $A = B$, $C = D$
-1. (? points) $C = D$
-1. (? points) No additional constraints.
+1. (4 points) $H[i] = i + 1$ (for all $0 \le i \le N - 1$)
+1. (8 points) $N \le 200$, $Q \le 200$
+1. (13 points) $N \le 2000$, $Q \le 2000$
+1. (12 points) $Q \le 5$
+1. (23 points) $A = B$, $C = D$
+1. (21 points) $C = D$
+1. (19 points) No additional constraints.
 
 ## Sample Grader
 

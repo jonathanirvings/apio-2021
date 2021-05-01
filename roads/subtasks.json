@@ -8,37 +8,37 @@
     },
     "star": {
       "index": 1,
-      "score": 0,
+      "score": 6,
       "validators": []
     },
     "line": {
       "index": 2,
-      "score": 0,
+      "score": 8,
       "validators": []
     },
     "cubic": {
       "index": 3,
-      "score": 0,
+      "score": 17,
       "validators": []
     },
     "quadratic": {
       "index": 4,
-      "score": 0,
+      "score": 15,
       "validators": []
     },
     "constant-W": {
       "index": 5,
-      "score": 0,
+      "score": 19,
       "validators": []
     },
     "small-W": {
       "index": 6,
-      "score": 0,
+      "score": 20,
       "validators": []
     },
     "full": {
       "index": 7,
-      "score": 0,
+      "score": 15,
       "validators": []
     }
   }

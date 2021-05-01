@@ -97,12 +97,12 @@ Therefore, the procedure `add_restriction` should return $0$.
 
 ## Subtasks
 
-1. (? points) $L = R$
-1. (? points) $L = 0$
-1. (? points) $N, Q \le 2000$
-1. (? points) The value of $R - L$ is the same for all calls to `add_restriction`.
-1. (? points) $H \le 20$
-1. (? points) No additional constraints.
+1. (5 points) $L = R$
+1. (9 points) $L = 0$
+1. (13 points) $N, Q \le 2000$
+1. (16 points) The value of $R - L$ is the same for all calls to `add_restriction`.
+1. (31 points) $H \le 20$
+1. (26 points) No additional constraints.
 
 ## Sample Grader
 

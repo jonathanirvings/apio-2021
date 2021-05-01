@@ -8,32 +8,32 @@
     },
     "L-equals-R": {
       "index": 1,
-      "score": 0,
+      "score": 5,
       "validators": []
     },
     "L-equals-zero": {
       "index": 2,
-      "score": 0,
+      "score": 9,
       "validators": []
     },
     "quadratic": {
       "index": 3,
-      "score": 0,
+      "score": 13,
       "validators": []
     },
     "constant-difference": {
       "index": 4,
-      "score": 0,
+      "score": 16,
       "validators": []
     },
     "small-H": {
       "index": 5,
-      "score": 0,
+      "score": 31,
       "validators": []
     },
     "full": {
       "index": 6,
-      "score": 0,
+      "score": 26,
       "validators": []
     }
   }

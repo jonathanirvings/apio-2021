@@ -8,37 +8,37 @@
     },
     "bruteforce": {
       "index": 1,
-      "score": 0,
+      "score": 9,
       "validators": []
     },
     "exponential": {
       "index": 2,
-      "score": 0,
+      "score": 8,
       "validators": []
     },
     "fifth": {
       "index": 3,
-      "score": 0,
+      "score": 7,
       "validators": []
     },
     "M-divides-A_i": {
       "index": 4,
-      "score": 0,
+      "score": 11,
       "validators": []
     },
     "A_i-equals-i": {
       "index": 5,
-      "score": 0,
+      "score": 14,
       "validators": []
     },
     "cubic": {
       "index": 6,
-      "score": 0,
+      "score": 30,
       "validators": []
     },
     "full": {
       "index": 7,
-      "score": 0,
+      "score": 21,
       "validators": []
     }
   }
