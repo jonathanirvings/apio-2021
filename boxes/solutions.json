@@ -63,12 +63,10 @@
     }
   },
   "wa-dp-n3-prune-prabowo.cpp": {
-    "verdict": "incorrect",
+    "verdict": "correct",
     "except": {
-      "samples": "correct",
-      "bruteforce": "correct",
-      "exponential": "correct",
-      "fifth": "correct"
+      "M-divides-A_i": "incorrect",
+      "full": "incorrect"
     }
   },
   "solution-dp-dnc.cpp": {

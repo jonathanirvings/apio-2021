@@ -8,7 +8,7 @@
 
 const int kMaxN = 2000;
 const int kInf = 2e9;
-const int kMagic = 40;
+const int kMagic = 110;
 
 int lft[kMaxN][kMaxN];
 int rgt[kMaxN][kMaxN];
