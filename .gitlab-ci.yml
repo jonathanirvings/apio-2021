@@ -38,7 +38,7 @@ before_script:
   script:
     - cd "${CI_PROJECT_DIR}/${TASK}"
     - ../tps/tps.sh export CMS -o ${TASK}
-    - scp ${TASK}/${TASK}.zip ${CONTROL_STAGING_HOST}:~/cms/
+    - scp ${TASK}.zip ${CONTROL_STAGING_HOST}:~/cms/
     - ssh ${CONTROL_STAGING_HOST} "~/cms/import.sh ${TASK}"
   environment:
     name: "staging_${TASK}"
