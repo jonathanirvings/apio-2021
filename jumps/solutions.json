@@ -81,5 +81,15 @@
   },
   "solution-prabowo.cpp": {
     "verdict": "correct"
+  },
+  "solution-sebas.cpp": {
+    "verdict": "correct"
+  },
+  "solution-sebas-wa-miss-special-case.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "increasing-H": "correct"
+    }
   }
 }
