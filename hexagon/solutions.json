@@ -1,0 +1,24 @@
+{
+  "solution-amnu-triangle.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "B-equals-zero-triangle": "correct",
+      "triangle": "correct"
+    }
+  },
+  "solution-amnu-flood-fill.cpp": {
+    "verdict": "runtime_error",
+    "except": {
+      "samples": "correct",
+      "quadratic-sum-L": "correct"
+    }
+  },
+  "solution-amnu-pick-theorem.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "B-equals-zero-triangle": "correct",
+      "B-equals-zero-small": "correct",
+      "B-equals-zero": "correct"
+    }
+  }
+}
