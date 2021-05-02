@@ -70,5 +70,30 @@
       "constant-difference": "correct",
       "small-H": "correct"
     }
+  },
+  "solution-sebas.cpp": {
+    "verdict": "correct"
+  },
+  "solution-sebas-wa-1-base-indexing.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct"
+    }
+  },
+  "solution-sebas-wa-wrong-beats-condition.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "L-equals-zero": "correct"
+    }
+  },
+  "solution-sebas-wa-local-check.cpp": {
+    "verdict": "incorrect",
+    "except": {
+      "samples": "correct",
+      "L-equals-R": "correct",
+      "L-equals-zero": "correct",
+      "constant-difference": "correct"
+    }
   }
 }
