@@ -4,11 +4,12 @@ In the city of Surabaya, there are $N$ junctions, numbered from $0$ to $N - 1$.
 These junctions are connected by $N - 1$ bidirectional roads, numbered from $0$ to $N - 2$, such that there is a unique path between any pair of junctions through the roads.
 Road $i$ ($0 \le i \le N - 2$) connects junction $U[i]$ and $V[i]$.
 
-To raise environmental awareness, Pak Dengklek, as the major of Surabaya, plans to hold a Car Free Day.
-To encourage the event, Pak Dengklek will choose a non-negative integer $k$, then close some of the roads such that each junction is directly connected to **at most** $k$ roads that are not closed.
-The cost to close the road $i$ is $W[i]$.
+To raise environmental awareness, Pak Dengklek, as the mayor of Surabaya, plans to hold a Car Free Day.
+To encourage the event, Pak Dengklek will organize road closures.
+Pak Dengklek will first choose a non-negative integer $k$, then close some of the roads such that each junction is directly connected to **at most** $k$ roads that are not closed.
+The cost to close road $i$ is $W[i]$.
 
-Help Pak Dengklek to find the minimum total cost to close the roads for each non-negative integer $k$ ($0 \le k \le N - 1$) that Pak Dengklek chose.
+Help Pak Dengklek to find the minimum total cost to close the roads for each possible non-negative integer $k$ ($0 \le k \le N - 1$).
 
 ## Implementation Details
 
@@ -21,7 +22,7 @@ int64[] minimum_closure_costs(int N, int[] U, int[] V, int[] W)
 * $N$: the number of junctions in Surabaya.
 * $U$ and $V$: arrays of size $N - 1$, where junctions $U[i]$ and $V[i]$ are connected by road $i$.
 * $W$: an array of size $N - 1$, where $W[i]$ is the cost to close road $i$.
-* This procedure should return a single array of size $N$. For each $i$ ($0 \le i \le N - 1$), the $i$-th element is the minimum total cost to close the roads such that each junction is directly connected to at most $i$ roads that are not closed.
+* This procedure should return a single array of size $N$. For each $k$ ($0 \le k \le N - 1$), the $k$-th element is the minimum total cost to close the roads such that each junction is directly connected to at most $k$ roads that are not closed.
 * This procedure is called exactly once.
 
 ## Examples
@@ -34,7 +35,7 @@ Consider the following call:
 minimum_closure_costs(5, [0, 0, 0, 2], [1, 2, 3, 4], [1, 4, 3, 2])
 ```
 
-This means there is a total of $5$ junctions and $4$ roads connecting the junction pairs $(0, 1)$, $(0, 2)$, $(0, 3)$, and $(2, 4)$ with the closure costs $1$, $4$, $3$, and $2$ respectively.
+This means there is a total of $5$ junctions and $4$ roads connecting the junction pairs $(0, 1)$, $(0, 2)$, $(0, 3)$, and $(2, 4)$ with closure costs $1$, $4$, $3$, and $2$, respectively.
 
 ![](render/roads-1.png = 200px)
 
@@ -45,7 +46,7 @@ To obtain the minimum costs:
 * if Pak Dengklek chose $k = 2$, then road $0$ should be closed with a total cost of $1$;
 * if Pak Dengklek chose $k = 3$ or $k = 4$, then no roads need to be closed.
 
-To answer these minimum costs, the `minimum_closure_costs` procedure should return $[10, 5, 1, 0, 0]$.
+Therefore, the `minimum_closure_costs` procedure should return $[10, 5, 1, 0, 0]$.
 
 ### Example 2
 
@@ -66,7 +67,7 @@ To obtain the minimum costs:
 * if Pak Dengklek chose $k = 2$, then either road $0$ or road $2$ should be closed with a total cost of $5$;
 * if Pak Dengklek chose $k = 3$, then no roads need to be closed.
 
-To answer these minimum costs, the `minimum_closure_costs` procedure should return $[20, 10, 5, 0]$.
+Therefore, the `minimum_closure_costs` procedure should return $[20, 10, 5, 0]$.
 
 ## Constraints
 
