@@ -77,7 +77,7 @@ Therefore, the procedure `draw_territory` should return $1003$.
 
 ## Constraints
 
-* $3 \le N \le 100\,000$
+* $3 \le N \le 200\,000$
 * $0 \le A, B \le 10^9$
 * $1 \le D[i] \le 6$ (for all $0 \le i \le N - 1$)
 * $1 \le L[i]$ (for all $0 \le i \le N - 1$)
@@ -89,9 +89,9 @@ Therefore, the procedure `draw_territory` should return $1003$.
 1. (3 points) $N = 3$, $B = 0$
 1. (6 points) $N = 3$
 1. (11 points) The sum of all elements of $L$ does not exceed $2\,000$.
-1. (12 points) $B = 0$, the sum of all elements of $L$ does not exceed $1\,000\,000$.
+1. (12 points) $B = 0$, the sum of all elements of $L$ does not exceed $200\,000$.
 1. (15 points) $B = 0$
-1. (19 points) The sum of all elements of $L$ does not exceed $1\,000\,000$.
+1. (19 points) The sum of all elements of $L$ does not exceed $200\,000$.
 1. (18 points) $L[i] = L[i + 1]$ (for all $0 \le i \le N - 2$)
 1. (16 points) No additional constraints.
 

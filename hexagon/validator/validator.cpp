@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-const int kMaxN = 100000;
+const int kMaxN = 200000;
 const int kMaxA = 1000000000;
 const int kMaxB = 1000000000;
 const int kMaxSumL = 1000000000;
@@ -385,11 +385,11 @@ int main(int, char *argv[]) {
     maxSumL = 2000;
   } else if (strcmp(subtask_name, "B-equals-zero-small") == 0) {
     maxB = 0;
-    maxSumL = 1000000;
+    maxSumL = 200000;
   } else if (strcmp(subtask_name, "B-equals-zero") == 0) {
     maxB = 0;
   } else if (strcmp(subtask_name, "linear-sum-L") == 0) {
-    maxSumL = 1000000;
+    maxSumL = 200000;
   }
   
   int N = inf.readInt(3, maxN, "N");
