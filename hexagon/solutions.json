@@ -20,5 +20,8 @@
       "B-equals-zero-small": "correct",
       "B-equals-zero": "correct"
     }
+  },
+  "solution-prabowo.cpp": {
+    "verdict": "correct"
   }
 }
