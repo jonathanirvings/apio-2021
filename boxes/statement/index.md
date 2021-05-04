@@ -1,21 +1,21 @@
 # Box Lifting
 
 A stack of $N$ boxes, numbered from $0$ to $N - 1$ from top to bottom, are initially located at coordinates $(0, 0)$.
-Pak Dengklek would like to store these boxes in storage areas, which are located at coordinates $(t, M - t)$ for all $0 \le t \le M$.
+Pak Dengklek would like to store these boxes in storage areas, which are located at coordinates $(t, M - t)$ for all integers $0 \le t \le M$.
 Box $i$ needs to be stored at coordinates $(A[i], M - A[i])$.
 
 A forklift is used to move the boxes around.
-In one step, the forklift can:
+In one step, the forklift can perform the following in order:
 
-1. Choose some coordinates $(x, y)$ that contains some boxes.
-1. Choose some positive integer $k$ that is at most the number of boxes at $(x, y)$, then lift the $k$ topmost boxes from that coordinates.
+1. Choose some coordinates $(x, y)$ that contains at least one box.
+1. Choose some positive integer $k$ that is not more than the number of boxes at $(x, y)$, then lift the $k$ topmost boxes from that coordinates in a single stack.
 1. Choose either coordinates $(x + 1, y)$ or $(x, y + 1)$ as the destination, given that the destination is a storage area **or** does not contain any boxes.
-1. Put all the lifted boxes in the destination while preserving their orders.
+1. Put all the lifted boxes in the destination while preserving the order of the boxes in the stack.
 
 Find the minimum number of steps needed to store all the boxes in their designated area.
 Note that the stored boxes in each storage area do not need to follow any certain order.
 
-## Implementation Detail
+## Implementation Details
 
 You should implement the following procedure:
 
@@ -24,7 +24,7 @@ int minimum_lifts(int N, int M, int[] A)
 ```
 
 * $N$: the number of boxes.
-* $M$: an integer where the storage areas are located at coordinates $(t, M - t)$ for all $0 \le t \le M$.
+* $M$: an integer where the storage areas are located at coordinates $(t, M - t)$ for all integers $0 \le t \le M$.
 * $A$: an array of length $N$, where $(A[i], M - A[i])$ are the coordinates to store box $i$ at.
 * This procedure should return the minimum number of steps required to store all the boxes.
 * This procedure is called exactly once.
