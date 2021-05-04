@@ -1,12 +1,12 @@
 # Height Restrictions
 
-In the city of Makassar, $N$ buildings, numbered from $0$ to $N - 1$, are planned to be built with heights that are still to be determined.
+In the city of Makassar, $N$ buildings, numbered from $0$ to $N - 1$, are planned to be built with positive integer heights that are still to be determined.
 
 The engineer in charge of the plan will gradually impose some restrictions on the height of the buildings.
-Each restriction is represented by three integers $L$, $R$, and $H$ ($0 \le L \le R \le N - 1$), which means that the maximum height of the buildings numbered from $L$ to $R$ must be exactly $H$.
+Each restriction is represented by three integers $L$, $R$, and $H$ ($0 \le L \le R \le N - 1$), which means that the maximum height of the buildings numbered from $L$ to $R$ (inclusive) must be exactly $H$.
 Formally, if $a[i]$ represents the height of building $i$, then $\max(a[L], a[L + 1], \ldots, a[R]) = H$ must be satisfied.
 
-In total, the engineer will impose a total of $Q$ restrictions.
+The engineer will impose a total of $Q$ restrictions.
 Each time a new restriction is added, determine whether it is still possible to carry out the plan.
 In other words, determine whether there exists a sequence of positive integers $a[0], a[1], \ldots, a[N - 1]$, where $a[i]$ is the height of building $i$, such that all the restrictions imposed so far are still satisfied.
 
@@ -45,7 +45,7 @@ After initialization has been done, consider the following call:
 add_restriction(1, 1, 5)
 ```
 
-This means building $1$ must has a height of exactly $5$.
+This means building $1$ must have a height of exactly $5$.
 One possible sequence of building heights is $[10, 5, 1, 7, 4, 5, 5]$.
 Therefore, the procedure `add_restriction` should return $1$.
 
@@ -76,7 +76,7 @@ add_restriction(0, 6, 10)
 ```
 
 This means the maximum height of all buildings must be exactly $10$.
-Since every building is now part of a restriction that is less than $10$, it is now impossible to satisfy the restriction.
+Since every building was part of some restrictions where the maximum height is less than $10$, it is now impossible to satisfy the restrictions.
 Therefore, the procedure `add_restriction` should return $0$.
 
 Consider another possible call:
@@ -86,7 +86,7 @@ add_restriction(1, 1, 5)
 ```
 
 This is actually the same as the first restriction.
-As the plan was already impossible, any further restrictions will always be impossible.
+As the plan was already impossible, any further additional restrictions will always be impossible.
 Therefore, the procedure `add_restriction` should return $0$.
 
 ## Constraints
