@@ -7,15 +7,18 @@ In one step, Pak Dengklek can move from one cell to one of its neighbours by mov
 ![](render/directions.png = 200x)
 
 Pak Dengklek will form a territory by following a path that consists of a sequence of cells that are visited by a sequence of $N$ moves.
-The $i$-th move is made by choosing a direction $D[i]$, then perform $L[i]$ steps towards the chosen direction.
+The $i$-th move is made by choosing a direction $D[i]$, then performing $L[i]$ steps in the chosen direction.
 The path has the following properties:
 * The path is *closed*, meaning that the cell at the end of the sequence is the same as the cell at the beginning of the sequence.
-* The path is *simple*, meaning that a cell can be visited at most once, except for the initial cell, which is visited exactly twice (at the beginning and the end).
+* The path is *simple*, meaning that every cell can be visited at most once, except for the initial cell, which is visited exactly twice (at the beginning and at the end).
 * The path is *exposed*, meaning that each cell in the path is neighbouring with at least one cell that is neither in the path nor is *inside*.
-  * A cell is said to be *inside* if it is not in the path, and you can only visit a finite number of cells using some sequence of steps without visiting any cell in the path.
+  * A cell is said to be *inside* if it is not in the path and you can only visit a finite number of cells using any sequence of steps without visiting any cell in the path.
 
 The following is an example of a path that can be followed by Pak Dengklek.
-The cell numbered $1$ is the initial cell, cells that are numbered are cells in the path (in the order they are visited), and cells that are shaded darker than the rest are cells that are inside.
+
+* The cell numbered $1$ (shaded pink) is the initial (and final) cell.
+* Cells that are numbered (shaded light blue) are cells in the path, numbered in the order they are visited.
+* Cells that are crossed (shaded dark blue) are cells that are inside.
 
 ![](render/path.png = 450x)
 
