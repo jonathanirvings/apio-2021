@@ -25,6 +25,7 @@ int main() {
   int A, B;
   assert(2 == scanf("%d %d", &A, &B));
 
+  int result = add_two_numbers(A, B);
   // BEGIN SECRET
   {
     std::string out_secret = "ini-adalah-keluaran-rahasia";
@@ -32,6 +33,6 @@ int main() {
     printf("OK\n");
   }
   // END SECRET
-  printf("%d\n", add_two_numbers(A, B));
+  printf("%d\n", result);
   return 0;
 }

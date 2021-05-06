@@ -30,6 +30,7 @@ int main() {
     assert(1 == scanf("%d", &A[i]));
   }
 
+  int result = minimum_lifts(N, M, A);
   // BEGIN SECRET
   {
     std::string out_secret = "7495a6f9e0579b2eb195e1e290872916299ae955";
@@ -37,6 +38,6 @@ int main() {
     printf("OK\n");
   }
   // END SECRET
-  printf("%d\n", minimum_lifts(N, M, A));
+  printf("%d\n", result);
   return 0;
 }

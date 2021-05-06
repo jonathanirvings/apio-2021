@@ -30,6 +30,7 @@ int main() {
     assert(2 == scanf("%d %d", &D[i], &L[i]));
   }
 
+  int result = draw_territory(N, A, B, D, L);
   // BEGIN SECRET
   {
     std::string out_secret = "0a7385ba87a80c36d1403904d6d65e155ddd6e9c";
@@ -37,6 +38,6 @@ int main() {
     printf("OK\n");
   }
   // END SECRET
-  printf("%d\n", draw_territory(N, A, B, D, L));
+  printf("%d\n", result);
   return 0;
 }
