@@ -2,9 +2,13 @@
 %
 % pdflatex main.tex
 % convert -density 300 -background white -alpha remove -alpha off main.pdf main.png
-% mv main-0.png hexagon-directions.png
-% mv main-1.png hexagon-path.png
-% mv main-2.png hexagon-distances.png
+% mv main-0.png ../hexagon-directions.png
+% mv main-1.png ../hexagon-path.png
+% mv main-2.png ../hexagon-distances.png
+% cd ..
+% mogrify -resize 200x hexagon-directions.png
+% mogrify -resize 450x hexagon-path.png
+% mogrify -resize 450x hexagon-distances.png
 
 \documentclass[tikz,border=10pt]{standalone}
 \usepackage{tikz}

@@ -4,7 +4,7 @@ Pak Dengklek is standing at a cell, called the initial cell, on an infinite hexa
 Two cells in a hexagonal tiling are said to be neighbouring if they share a common side.
 In one step, Pak Dengklek can move from one cell to one of its neighbours by moving towards one of the six possible directions, numbered from $1$ to $6$, as illustrated by the following figure.
 
-![](render/hexagon-directions.png = 200x)
+![](hexagon-directions.png)
 
 Pak Dengklek will form a territory by following a path that consists of a sequence of cells that are visited by a sequence of $N$ moves.
 The $i$-th move is made by choosing a direction $D[i]$, then performing $L[i]$ steps in the chosen direction.
@@ -20,14 +20,14 @@ The following is an example of a path that can be followed by Pak Dengklek.
 * Cells that are numbered (shaded light blue) are cells in the path, numbered in the order they are visited.
 * Cells that are crossed (shaded dark blue) are cells that are inside.
 
-![](render/hexagon-path.png = 450x)
+![](hexagon-path.png)
 
 The formed territory will consist of all cells that are in the path or are inside.
 The distance of a cell $c$ in the territory is the minimum number of steps needed to move from the initial cell to the cell $c$ by visiting only cells in the territory.
 The score of a cell in the territory is defined as $A + d \times B$, where $A$ and $B$ are constants predetermined by Pak Dengklek, and $d$ is the distance of the cell in the territory.
 The following is the illustration of the distance of each cell in the territory formed using the path from the example above.
 
-![](render/hexagon-distances.png = 450x)
+![](hexagon-distances.png)
 
 Help Pak Dengklek to calculate the total score of all cells in the territory formed by the $N$ moves that he will make. As the total score can be large, calculate it modulo $10^9 + 7$.
 

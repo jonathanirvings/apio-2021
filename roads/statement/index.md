@@ -37,7 +37,7 @@ minimum_closure_costs(5, [0, 0, 0, 2], [1, 2, 3, 4], [1, 4, 3, 2])
 
 This means there is a total of $5$ junctions and $4$ roads connecting the junction pairs $(0, 1)$, $(0, 2)$, $(0, 3)$, and $(2, 4)$ with closure costs $1$, $4$, $3$, and $2$, respectively.
 
-![](render/roads-1.png = 200px)
+![](roads-1.png)
 
 To obtain the minimum costs:
 
@@ -58,7 +58,7 @@ minimum_closure_costs(4, [0, 2, 0], [1, 0, 3], [5, 10, 5])
 
 This means there is a total of $4$ junctions and $3$ roads connecting the junction pairs $(0, 1)$, $(2, 0)$, and $(0, 3)$ with the closure costs $5$, $10$, and $5$ respectively.
 
-![](render/roads-2.png = 200px)
+![](roads-2.png)
 
 To obtain the minimum costs:
 
