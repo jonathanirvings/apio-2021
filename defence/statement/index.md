@@ -74,7 +74,7 @@ This sample can be illustrated with the following image.
 The numbers inside each rectangle in the image corresponds to each territorial defence.
 Since all territorial defences have the same area as what Pak Dengklek wants, therefore Pak Dengklek's happiness value is $3 + 3 + 3 = 9$.
 
-![](defence-1.png = 250x)
+![](render/defence-1.png = 250x)
 
 ## Example 2
 
@@ -99,7 +99,7 @@ The numbers inside each rectangle in the image correspond to territorial defence
 Note that in this sample output, territorial defence $3$ is not assigned with any area. Moreover, there is part of Toki territory that is not inside any territorial defences.
 Pak Dengklek's happiness value for this sample is $3 + 3 + 3 + 0 = 9$.
 
-![](defence-2.png = 250x)
+![](render/defence-2.png = 250x)
 
 ## Constraints
 
