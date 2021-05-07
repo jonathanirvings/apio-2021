@@ -76,6 +76,9 @@ bool checkInput() {
 
 int main(int argc, char * argv[]) {
   registerChecker("defence", argc, argv);
+  // ouf.printMessage is disabled to avoid printing any character from the
+  // contestants to CMS.
+  ouf.printMessage = false;
 
   n = inf.readInt();
   m = inf.readInt();
