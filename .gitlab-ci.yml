@@ -38,8 +38,8 @@ before_script:
   script:
     - cd "${CI_PROJECT_DIR}/${TASK}"
     - ../tps/tps.sh export CMS -o ${TASK}
-    - scp ${TASK}.zip ${CONTROL_STAGING_HOST}:~/cms/
-    - ssh ${CONTROL_STAGING_HOST} "~/cms/import.sh ${TASK}"
+    - scp -o ProxyCommand="ssh $CONTROL_STAGING_HOST nc 10.0.0.31 22" ${TASK}.zip 10.0.0.31:~/cms/
+    - ssh -J $CONTROL_STAGING_HOST 10.0.0.31 "cd cms; rm -rf $TASK; unzip $TASK.zip; cmsImportTask -L tps_task $TASK --update"
   environment:
     name: "staging_${TASK}"
     deployment_tier: staging
