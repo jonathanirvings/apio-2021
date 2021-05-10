@@ -29,8 +29,8 @@ int main(int, char *argv[]) {
     maxN = maxQ = 50;
     maxSumT = 50;
   } else if (strcmp(subtask_name, "cubic") == 0) {
-    maxN = maxQ = 200;
-    maxSumT = 200;
+    maxN = maxQ = 300;
+    maxSumT = 300;
   } else if (strcmp(subtask_name, "quadratic") == 0) {
     maxN = maxQ = 2000;
     maxSumT = 2000;

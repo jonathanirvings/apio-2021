@@ -21,10 +21,10 @@ kMaxN = 2 * 10**5
 kMaxQ = 1 * 10**5
 kMaxS = k1e9
 kMaxSumO = 2 * 10**5
-kMaxNSub = [0, 0, 50, 50, 200, 2000]
-kMaxQSub = [0, 0, 50, 50, 200, 2000]
+kMaxNSub = [0, 0, 50, 50, 300, 2000]
+kMaxQSub = [0, 0, 50, 50, 300, 2000]
 kMaxSSub = [0, 0, 50, k1e9, k1e9, k1e9]
-kMaxSumOSub = [0, 0, 50, 50, 200, 2000]
+kMaxSumOSub = [0, 0, 50, 50, 300, 2000]
 
 N = kMaxN
 Q = kMaxQ

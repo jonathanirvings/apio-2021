@@ -97,7 +97,7 @@ Therefore, the procedure `count_users` should return $1$.
 
 1. (15 points) $N, S, Q \le 50$ and the sum of all elements of $T$ does not exceed $50$.
 1. (17 points) $N, Q \le 50$ and the sum of all elements of $T$ does not exceed $50$.
-1. (21 points) $N, Q \le 200$ and the sum of all elements of $T$ does not exceed $200$.
+1. (21 points) $N, Q \le 300$ and the sum of all elements of $T$ does not exceed $300$.
 1. (26 points) $N, Q \le 2000$ and the sum of all elements of $T$ does not exceed $2000$.
 1. (21 points) No additional constraints.
 
