@@ -23,8 +23,4 @@ In C++, the graders use appropriate data types or implementations, as listed bel
 
 # Limits
 
-| Task      | Name                | Time limit  | Memory Limit |
-| --------- | ------------------- | ----------- | ------------ |
-| hexagon   | Hexagonal Territory | 2 sec       | 1 GiB        |
-| jumps     | Rainforest Jumps    | 2 sec       | 1 GiB        |
-| roads     | Road Closures       | 1 sec       | 1 GiB        |
+The limits for all tasks are available in the "Overview" page in the contest system.

@@ -28,9 +28,4 @@ In C++, the graders use appropriate data types or implementations, as listed bel
 
 # Limits
 
-| Task      | Name               | Time limit  | Memory Limit |
-| --------- | ------------------ | ----------- | ------------ |
-| aplusb    | A Plus B           | 1 sec       | 1 GiB        |
-| cards     | Magic Cards        | 4 sec       | 1 GiB        |
-| defence   | National Defence   | output-only | output-only  |
-| hoax      | Hoax Spreading     | 2 sec       | 1 GiB        |
+The limits for all tasks are available in the "Overview" page in the contest system.
