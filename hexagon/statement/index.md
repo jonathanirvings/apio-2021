@@ -11,7 +11,7 @@ The $i$-th move is made by choosing a direction $D[i]$, then performing $L[i]$ s
 The path has the following properties:
 * The path is *closed*, meaning that the cell at the end of the sequence is the same as the cell at the beginning of the sequence.
 * The path is *simple*, meaning that every cell can be visited at most once, except for the initial cell, which is visited exactly twice (at the beginning and at the end).
-* The path is *exposed*, meaning that each cell in the path is neighbouring with at least one cell that is neither in the path nor is *inside*.
+* The path is *exposed*, meaning that each cell in the path is neighbouring with at least one cell that is not in the path and is not *inside*.
   * A cell is said to be *inside* if it is not in the path and you can only visit a finite number of cells using any sequence of steps without visiting any cell in the path.
 
 The following is an example of a path that can be followed by Pak Dengklek.
