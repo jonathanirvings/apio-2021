@@ -78,13 +78,13 @@ Therefore, the `minimum_closure_costs` procedure should return $[20, 10, 5, 0]$.
 
 ## Subtasks
 
-1. (6 points) $U[i] = 0$ (for all $0 \le i \le N - 2$)
-1. (8 points) $U[i] = i$, $V[i] = i + 1$ (for all $0 \le i \le N - 2$)
-1. (17 points) $N \le 200$
-1. (15 points) $N \le 2000$
-1. (19 points) $W[i] = 1$ (for all $0 \le i \le N - 2$)
-1. (20 points) $W[i] \le 10$ (for all $0 \le i \le N - 2$)
-1. (15 points) No additional constraints.
+1. (5 points) $U[i] = 0$ (for all $0 \le i \le N - 2$)
+1. (7 points) $U[i] = i$, $V[i] = i + 1$ (for all $0 \le i \le N - 2$)
+1. (14 points) $N \le 200$
+1. (10 points) $N \le 2000$
+1. (17 points) $W[i] = 1$ (for all $0 \le i \le N - 2$)
+1. (25 points) $W[i] \le 10$ (for all $0 \le i \le N - 2$)
+1. (22 points) No additional constraints.
 
 ## Sample Grader
 
