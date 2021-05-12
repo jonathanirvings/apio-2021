@@ -3,6 +3,7 @@ stages:
   - gen
   - invoke_all
   - export_staging
+  - export_production
 
 before_script:
   - git submodule update --init --recursive
@@ -38,11 +39,25 @@ before_script:
   script:
     - cd "${CI_PROJECT_DIR}/${TASK}"
     - ../tps/tps.sh export CMS -o ${TASK}
-    - scp -o ProxyCommand="ssh $CONTROL_STAGING_HOST nc 10.0.0.31 22" ${TASK}.zip 10.0.0.31:~/cms/
-    - ssh -J $CONTROL_STAGING_HOST 10.0.0.31 "cd cms; rm -rf $TASK; unzip $TASK.zip; cmsImportTask -L tps_task $TASK --update"
+    - scp -o StrictHostKeyChecking=no -o ProxyCommand="ssh $CONTROL_STAGING_HOST nc 10.0.0.31 22" $TASK.zip 10.0.0.31:~/cms/
+    - ssh -o StrictHostKeyChecking=no -J $CONTROL_STAGING_HOST 10.0.0.31 "cd cms; rm -rf $TASK; unzip $TASK.zip; cmsImportTask -L tps_task $TASK --update"
   environment:
     name: "staging_${TASK}"
     deployment_tier: staging
+  only:
+    - master
+  when: manual
+
+.export_production_template: &export_production_template
+  stage: export_production
+  script:
+    - cd "${CI_PROJECT_DIR}/${TASK}"
+    - ../tps/tps.sh export CMS -o ${TASK}
+    - scp -o StrictHostKeyChecking=no -o ProxyCommand="ssh $CONTROL_PRODUCTION_HOST nc 10.0.0.31 22" $TASK.zip 10.0.0.31:~/cms/
+    - ssh -o StrictHostKeyChecking=no -J $CONTROL_PRODUCTION_HOST 10.0.0.31 "cd cms; rm -rf $TASK; unzip $TASK.zip; cmsImportTask -L tps_task $TASK --update"
+  environment:
+    name: "production_${TASK}"
+    deployment_tier: production
   only:
     - master
   when: manual
@@ -68,6 +83,13 @@ aplusb:invoke_all:
 
 aplusb:export_staging:
   <<: *export_staging_template
+  needs:
+    - aplusb:gen
+  variables:
+    TASK: aplusb
+
+aplusb:export_production:
+  <<: *export_production_template
   needs:
     - aplusb:gen
   variables:
@@ -99,6 +121,13 @@ boxes:export_staging:
   variables:
     TASK: boxes
 
+boxes:export_production:
+  <<: *export_production_template
+  needs:
+    - boxes:gen
+  variables:
+    TASK: boxes
+
 cards:verify:
   <<: *verify_template
   variables:
@@ -120,6 +149,13 @@ cards:invoke_all:
 
 cards:export_staging:
   <<: *export_staging_template
+  needs:
+    - cards:gen
+  variables:
+    TASK: cards
+
+cards:export_production:
+  <<: *export_production_template
   needs:
     - cards:gen
   variables:
@@ -151,6 +187,13 @@ defence:export_staging:
   variables:
     TASK: defence
 
+defence:export_production:
+  <<: *export_production_template
+  needs:
+    - defence:gen
+  variables:
+    TASK: defence
+
 height:verify:
   <<: *verify_template
   variables:
@@ -172,6 +215,13 @@ height:invoke_all:
 
 height:export_staging:
   <<: *export_staging_template
+  needs:
+    - height:gen
+  variables:
+    TASK: height
+
+height:export_production:
+  <<: *export_production_template
   needs:
     - height:gen
   variables:
@@ -203,6 +253,13 @@ hexagon:export_staging:
   variables:
     TASK: hexagon
 
+hexagon:export_production:
+  <<: *export_production_template
+  needs:
+    - hexagon:gen
+  variables:
+    TASK: hexagon
+
 hoax:verify:
   <<: *verify_template
   variables:
@@ -224,6 +281,13 @@ hoax:invoke_all:
 
 hoax:export_staging:
   <<: *export_staging_template
+  needs:
+    - hoax:gen
+  variables:
+    TASK: hoax
+
+hoax:export_production:
+  <<: *export_production_template
   needs:
     - hoax:gen
   variables:
@@ -255,6 +319,13 @@ jumps:export_staging:
   variables:
     TASK: jumps
 
+jumps:export_production:
+  <<: *export_production_template
+  needs:
+    - jumps:gen
+  variables:
+    TASK: jumps
+
 roads:verify:
   <<: *verify_template
   variables:
@@ -276,6 +347,13 @@ roads:invoke_all:
 
 roads:export_staging:
   <<: *export_staging_template
+  needs:
+    - roads:gen
+  variables:
+    TASK: roads
+
+roads:export_production:
+  <<: *export_production_template
   needs:
     - roads:gen
   variables:
