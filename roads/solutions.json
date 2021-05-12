@@ -51,7 +51,7 @@
     "verdict": "incorrect"
   },
   "solution_small_w.cpp": {
-    "verdict": "memory_limit",
+    "verdict": "time_limit_and_runtime_error",
     "except": {
       "samples": "correct",
       "constant-W": "correct",

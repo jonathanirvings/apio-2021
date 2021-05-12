@@ -7,14 +7,15 @@
     "except": {"increasing-H": "correct"}
   },
   "solution-cubic.cpp": {
-    "verdict": "time_limit",
+    "verdict": "time_limit_and_runtime_error",
     "except": {
       "samples": "correct",
-      "cubic": "correct"
+      "cubic": "correct",
+      "quadratic": "time_limit"
     }
   },
   "solution-quadratic.cpp": {
-    "verdict": "time_limit",
+    "verdict": "time_limit_and_runtime_error",
     "except": {
       "samples": "correct",
       "cubic": "correct",
