@@ -91,7 +91,7 @@ Therefore, the procedure `draw_territory` should return $1003$.
 
 1. (3 points) $N = 3$, $B = 0$
 1. (6 points) $N = 3$
-1. (11 points) The sum of all elements of $L$ does not exceed $2\,000$.
+1. (11 points) The sum of all elements of $L$ does not exceed $2000$.
 1. (12 points) $B = 0$, the sum of all elements of $L$ does not exceed $200\,000$.
 1. (15 points) $B = 0$
 1. (19 points) The sum of all elements of $L$ does not exceed $200\,000$.
