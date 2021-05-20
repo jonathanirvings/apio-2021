@@ -4,6 +4,8 @@ stages:
   - invoke_all
   - export_staging
   - export_production
+  - export_production-chn
+  - export_production-open
 
 before_script:
   - git submodule update --init --recursive
@@ -57,6 +59,34 @@ before_script:
     - ssh -o StrictHostKeyChecking=no -J $CONTROL_PRODUCTION_HOST 10.0.0.31 "cd cms; rm -rf $TASK; unzip $TASK.zip; cmsImportTask -L tps_task $TASK --update"
   environment:
     name: "production_${TASK}"
+    deployment_tier: production
+  only:
+    - master
+  when: manual
+
+.export_production-chn_template: &export_production-chn_template
+  stage: export_production-chn
+  script:
+    - cd "${CI_PROJECT_DIR}/${TASK}"
+    - ../tps/tps.sh export CMS -o ${TASK}
+    - scp -o StrictHostKeyChecking=no -o ProxyCommand="ssh $CONTROL_PRODUCTION_CHN_HOST nc 10.0.1.31 22" $TASK.zip 10.0.1.31:~/cms/
+    - ssh -o StrictHostKeyChecking=no -J $CONTROL_PRODUCTION_CHN_HOST 10.0.1.31 "cd cms; rm -rf $TASK; unzip $TASK.zip; cmsImportTask -L tps_task $TASK --update"
+  environment:
+    name: "production-chn_${TASK}"
+    deployment_tier: production
+  only:
+    - master
+  when: manual
+
+.export_production-open_template: &export_production-open_template
+  stage: export_production-open
+  script:
+    - cd "${CI_PROJECT_DIR}/${TASK}"
+    - ../tps/tps.sh export CMS -o ${TASK}
+    - scp -o StrictHostKeyChecking=no -o ProxyCommand="ssh $CONTROL_PRODUCTION_OPEN_HOST nc 10.0.0.31 22" $TASK.zip 10.0.0.31:~/cms/
+    - ssh -o StrictHostKeyChecking=no -J $CONTROL_PRODUCTION_OPEN_HOST 10.0.0.31 "cd cms; rm -rf $TASK; unzip $TASK.zip; cmsImportTask -L tps_task $TASK --update"
+  environment:
+    name: "production-open_${TASK}"
     deployment_tier: production
   only:
     - master
@@ -260,6 +290,20 @@ hexagon:export_production:
   variables:
     TASK: hexagon
 
+hexagon:export_production-chn:
+  <<: *export_production-chn_template
+  needs:
+    - hexagon:gen
+  variables:
+    TASK: hexagon
+
+hexagon:export_production-open:
+  <<: *export_production-open_template
+  needs:
+    - hexagon:gen
+  variables:
+    TASK: hexagon
+
 hoax:verify:
   <<: *verify_template
   variables:
@@ -326,6 +370,20 @@ jumps:export_production:
   variables:
     TASK: jumps
 
+jumps:export_production-chn:
+  <<: *export_production-chn_template
+  needs:
+    - jumps:gen
+  variables:
+    TASK: jumps
+
+jumps:export_production-open:
+  <<: *export_production-open_template
+  needs:
+    - jumps:gen
+  variables:
+    TASK: jumps
+
 roads:verify:
   <<: *verify_template
   variables:
@@ -354,6 +412,20 @@ roads:export_staging:
 
 roads:export_production:
   <<: *export_production_template
+  needs:
+    - roads:gen
+  variables:
+    TASK: roads
+
+roads:export_production-chn:
+  <<: *export_production-chn_template
+  needs:
+    - roads:gen
+  variables:
+    TASK: roads
+
+roads:export_production-open:
+  <<: *export_production-open_template
   needs:
     - roads:gen
   variables:
