@@ -46,8 +46,6 @@ before_script:
   environment:
     name: "staging_${TASK}"
     deployment_tier: staging
-  only:
-    - master
   when: manual
 
 .export_production_template: &export_production_template

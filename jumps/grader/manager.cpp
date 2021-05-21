@@ -56,7 +56,19 @@ int main(int argc, char *argv[]) {
     assert(4 == scanf("%d %d %d %d", &A, &B, &C, &D));
     fprintf(fout, "%d %d %d %d\n", A, B, C, D);
     fflush(fout);
-    
+
+    {
+      std::string in_secret = "P";
+      std::string out_secret = "fc5005cd102fffc504bc1615010ebf88823d65f3";
+      char secret[100];
+      if (fscanf(fin, "%s", secret) != 1 || std::string(secret) != in_secret) {
+        printf("%s\n", out_secret.c_str());
+        printf("SV\n");
+        fclose(stdout);
+        return 0;
+      }
+    }
+
     if (fscanf(fin, "%d", &jumps[i]) != 1) {
       std::string out_secret = "fc5005cd102fffc504bc1615010ebf88823d65f3";
       printf("%s\n", out_secret.c_str());

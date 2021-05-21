@@ -63,6 +63,18 @@ int main(int argc, char *argv[]) {
     fprintf(fout, "%d\n", P);
     fflush(fout);
 
+    {
+      std::string in_secret = "Q";
+      std::string out_secret = "ini-adalah-keluaran-rahasia";
+      char secret[100];
+      if (fscanf(fin, "%s", secret) != 1 || std::string(secret) != in_secret) {
+        printf("%s\n", out_secret.c_str());
+        printf("SV\n");
+        fclose(stdout);
+        return 0;
+      }
+    }
+
     if (fscanf(fin, "%d", &users[i]) != 1) {
       std::string out_secret = "ini-adalah-keluaran-rahasia";
       printf("%s\n", out_secret.c_str());
